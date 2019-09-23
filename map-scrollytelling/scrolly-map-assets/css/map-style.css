@@ -1,4 +1,5 @@
 body { margin:0; padding:0; }
+
 #map { position:absolute; top:0; bottom:0; width:100%; }
 
 #map {
@@ -51,7 +52,7 @@ body { margin:0; padding:0; }
 
 .pretty_box {
     display: inline-block;
-    width: 50%;
+    width: 90%;
     padding: 20px;
     text-align: left;
     font-size: 15px;
@@ -74,17 +75,14 @@ body { margin:0; padding:0; }
 
 .heading {
     padding: 20px;
-    font-size: 80px;
+    font-size: 140px;
     color: #ffffff;
     text-align: center;
-}
-
-mark {
-    background-color: #000000;
-    color: #000000;
+    text-decoration: underline;
 }
 
 .sub_heading {
+    font-size: 30px;
     color: #ffffff;
     text-align: center;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -94,7 +92,7 @@ mark {
     animation: 
         typing 3.5s steps(24, end),
         blink-caret .75s step-end infinite;
-}
+    }
 
 /* The typing effect */
 @keyframes typing {
@@ -107,6 +105,26 @@ mark {
   from, to { border-color: transparent }
   50% { border-color: white; }
 }
+
+mark {
+    background-color: #000000;
+    color: #000000;
+}
+
+@media only screen and (max-width: 400px) {
+  .heading {
+    font-size: 80px;
+    }
+  .sub_heading {
+    font-size: 50px;
+  }
+  .pretty_box {
+    width: 50%;
+  }
+}
+
+
+
 
 
 
