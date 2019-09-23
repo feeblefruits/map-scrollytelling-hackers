@@ -16,8 +16,11 @@ body { margin:0; padding:0; }
 }
 
 #features {
-    width: 50%;
-    margin-left: 25%;
+    padding-top: 15vh;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: inline-block;
+    text-align: center;
     font-family: sans-serif;
     overflow-y: scroll;
     background-color: transparent;
@@ -30,12 +33,13 @@ body { margin:0; padding:0; }
 }
 
 .map-chapter {
-    padding-top: 30vh;
+    padding-top: 15vh;
     padding-bottom: 50vh;
     padding-left: 5%;
     padding-right: 5%;
-    opacity: 0.99;
+    opacity: 0.99;   
 }
+
 
 .map-chapter.active {
 }
@@ -46,6 +50,8 @@ body { margin:0; padding:0; }
 }
 
 .pretty_box {
+    display: inline-block;
+    width: 50%;
     padding: 20px;
     text-align: left;
     font-size: 15px;
@@ -71,7 +77,6 @@ body { margin:0; padding:0; }
     font-size: 80px;
     color: #ffffff;
     text-align: center;
-
 }
 
 mark {
@@ -79,6 +84,29 @@ mark {
     color: #000000;
 }
 
+.sub_heading {
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .2em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+        typing 3.5s steps(24, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
 
 
 
