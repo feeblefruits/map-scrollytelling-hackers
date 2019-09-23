@@ -2,15 +2,23 @@ body { margin:0; padding:0; }
 #map { position:absolute; top:0; bottom:0; width:100%; }
 
 #map {
-position: fixed;
-width:100%;
+    position: fixed;
+    width:100%;
 }
+
+.scrolly_image {
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px;
+}
+
 #features {
-width: 50%;
-margin-left: 50%;
-font-family: sans-serif;
-overflow-y: scroll;
-background-color: transparent;
+    width: 50%;
+    margin-left: 50%;
+    font-family: sans-serif;
+    overflow-y: scroll;
+    background-color: transparent;
 }
 
 .scroll-notification {
@@ -20,20 +28,20 @@ background-color: transparent;
 }
 
 .map-chapter {
-padding-top: 50vh;
-padding-bottom: 50vh;
-padding-left: 5%;
-padding-right: 5%;
-line-height: 25px;
-opacity: 0.99;
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    line-height: 25px;
+    opacity: 0.99;
 }
 
 .map-chapter.active {
 }
 
 .map-chapter:last-child {
-border-bottom: none;
-margin-bottom: 200px;
+    border-bottom: none;
+    margin-bottom: 200px;
 }
 
 p {
@@ -45,4 +53,5 @@ p {
     background-color: #ffffff;
     opacity: 0.9;
     filter: alpha(opacity=90);
+    border-style: solid;
 }
