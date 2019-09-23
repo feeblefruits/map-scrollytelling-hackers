@@ -1,0 +1,48 @@
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+
+#map {
+position: fixed;
+width:100%;
+}
+#features {
+width: 50%;
+margin-left: 50%;
+font-family: sans-serif;
+overflow-y: scroll;
+background-color: transparent;
+}
+
+.scroll-notification {
+    position: sticky;
+    color: black;
+    bottom: 0px;
+}
+
+.map-chapter {
+padding-top: 50vh;
+padding-bottom: 50vh;
+padding-left: 5%;
+padding-right: 5%;
+line-height: 25px;
+opacity: 0.99;
+}
+
+.map-chapter.active {
+}
+
+.map-chapter:last-child {
+border-bottom: none;
+margin-bottom: 200px;
+}
+
+p {
+    padding: 20px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 140%;
+    color: black;
+    background-color: #ffffff;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
