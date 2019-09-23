@@ -8,14 +8,16 @@ body { margin:0; padding:0; }
 
 .scrolly_image {
     height: auto; 
-    width: auto; 
-    max-width: 300px; 
-    max-height: 300px;
+    width: 90%; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
 }
 
 #features {
     width: 50%;
-    margin-left: 50%;
+    margin-left: 25%;
     font-family: sans-serif;
     overflow-y: scroll;
     background-color: transparent;
@@ -28,11 +30,10 @@ body { margin:0; padding:0; }
 }
 
 .map-chapter {
-    padding-top: 50vh;
+    padding-top: 30vh;
     padding-bottom: 50vh;
     padding-left: 5%;
     padding-right: 5%;
-    line-height: 25px;
     opacity: 0.99;
 }
 
@@ -44,7 +45,7 @@ body { margin:0; padding:0; }
     margin-bottom: 200px;
 }
 
-p {
+.pretty_box {
     padding: 20px;
     text-align: left;
     font-size: 15px;
@@ -54,4 +55,32 @@ p {
     opacity: 0.9;
     filter: alpha(opacity=90);
     border-style: solid;
+    border-radius: 15px;
 }
+
+.scroll_prompt {
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    padding-top: 40px;
+    text-decoration: underline;
+}
+
+.heading {
+    padding: 20px;
+    font-size: 80px;
+    color: #ffffff;
+    text-align: center;
+
+}
+
+mark {
+    background-color: #000000;
+    color: #000000;
+}
+
+
+
+
+
+

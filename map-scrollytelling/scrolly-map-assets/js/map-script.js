@@ -1,8 +1,15 @@
 var chapters = {
+'header': {
+duration: 3000,
+center: [24.372235, -37.615087],
+zoom: 7.2,
+pitch: 0,
+bearing: 0,
+},
 'introduction': {
 duration: 3000,
-center: [25.0288, -24.0973],
-zoom: 4,
+center: [24.372235, -37.615087],
+zoom: 7.2,
 pitch: 0,
 bearing: 0,
 },
@@ -49,12 +56,12 @@ pitch: 70,
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWdkZXYiLCJhIjoiY2p4dzBpbnY1MDBnNzNrbXhqODhuNXBuOSJ9.WR7-Mdn3rIfJeps_BNUEBg';
 
-var start = [28.6790, -30.1115]
+var start = [24.372235, -37.615087]
 
 //Create the Mapbox map
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11?optimize=true',
+    style: 'mapbox://styles/mapbox/dark-v10?optimize=true',
     center: start,
     zoom: 7.2,
     pitch: 10,
@@ -75,7 +82,7 @@ break;
 }
 };
 
-var activeChapterName = 'lesotho-eastern-cape';
+var activeChapterName = 'header';
 function setActiveChapter(chapterName) {
 if (chapterName === activeChapterName) return;
  
