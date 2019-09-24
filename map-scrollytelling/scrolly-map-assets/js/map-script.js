@@ -1,5 +1,5 @@
 var chapters = {
-'header': {
+'header-wrapper': {
 duration: 3000,
 center: [24.372235, -37.615087],
 zoom: 7.2,
@@ -13,19 +13,19 @@ zoom: 7.2,
 pitch: 0,
 bearing: 0,
 },
+'cameroon': {
+duration: 4000,
+center: [12.941919, 4.575653],
+zoom: 6,
+pitch: 50,
+bearing: 30,
+},
 'mg-office': {
 duration: 3000,
 center: [28.0175513, -26.1844499],
 zoom: 8,
 pitch: 45,
 bearing: 40,
-},
-'botswana': {
-duration: 3000,
-center: [25.1966, -25.3430],
-zoom: 8,
-pitch: 50,
-bearing: 80,
 },
 'eswatini': {
 duration: 3000,
@@ -82,7 +82,7 @@ break;
 }
 };
 
-var activeChapterName = 'header';
+var activeChapterName = 'header-wrapper';
 function setActiveChapter(chapterName) {
 if (chapterName === activeChapterName) return;
  
