@@ -15,7 +15,7 @@ bearing: 0,
 },
 'cameroon': {
 duration: 4000,
-center: [12.941919, 4.575653],
+center: [9.700664, 4.055373],
 zoom: 6,
 pitch: 50,
 bearing: 30,
@@ -122,7 +122,18 @@ var geojson = {
     properties: {
       title: 'Mapbox',
       description: 'Ghana Newspaper'
-    }
+        }
+    },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [9.700664, 4.055373]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'Cameroon'
+    },
   }]
 };
 
@@ -131,18 +142,12 @@ geojson.features.forEach(function(marker) {
 
   // create a HTML element for each feature
   var el = document.createElement('div');
-  el.className = 'mg-marker';
+  el.className = 'orange-marker';
 
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
     .setLngLat(marker.geometry.coordinates)
     .addTo(map);
 
-  var gh_el = document.createElement('div');
-  gh_el.className = 'gh-marker';
-
-  new mapboxgl.Marker(gh_el)
-    .setLngLat(marker.geometry.coordinates)
-    .addTo(map);
 });
 

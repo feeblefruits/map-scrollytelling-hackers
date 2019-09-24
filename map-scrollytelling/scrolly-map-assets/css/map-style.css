@@ -7,6 +7,10 @@ body { margin:0; padding:0; }
     width:100%;
 }
 
+a {
+    color: #ffa500;
+}
+
 .scrolly_image {
     height: auto; 
     width: 40%; 
@@ -27,17 +31,8 @@ body { margin:0; padding:0; }
     background-color: transparent;
 }
 
-.mg-marker {
-  background-image: url('/scrolly-map-assets/icons/amp.png');
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.gh-marker {
-  background-image: url('/scrolly-map-assets/icons/newspaper_icon.png');
+.orange-marker {
+  background-image: url('/scrolly-map-assets/icons/waypoint-icon-orange.jpg');
   background-size: cover;
   width: 50px;
   height: 50px;
@@ -111,7 +106,7 @@ body { margin:0; padding:0; }
     color: #ffffff;
     text-align: center;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid white; /* The typwriter cursor */
+    border-right: .15em solid #ffa500; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     animation: 
@@ -129,7 +124,7 @@ body { margin:0; padding:0; }
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: white; }
+  50% { border-color: #ffa500; }
 }
 
 .block-header {
