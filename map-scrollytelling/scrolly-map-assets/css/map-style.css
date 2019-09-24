@@ -123,9 +123,12 @@ mark {
   }
   .block-header {
     font-size: 50px;
+    }
+.scrolly_image {
+    height: auto; 
+    width: 95%; 
+    }
 }
-}
-
 
 
 
