@@ -23,14 +23,14 @@ bearing: 30,
 'mg-office': {
 duration: 3000,
 center: [28.0175513, -26.1844499],
-zoom: 8,
+zoom: 7,
 pitch: 45,
 bearing: 40,
 },
-'eswatini': {
+'ghana': {
 duration: 3000,
-center: [31.4630, -26.5179],
-zoom: 8,
+center: [-0.187288, 5.591182],
+zoom: 6,
 pitch: 45,
 bearing: 20,
 },
@@ -117,11 +117,11 @@ var geojson = {
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [-122.414, 37.776]
+      coordinates: [-0.187288, 5.591182]
     },
     properties: {
       title: 'Mapbox',
-      description: 'Linode'
+      description: 'Ghana Newspaper'
     }
   }]
 };
@@ -137,4 +137,12 @@ geojson.features.forEach(function(marker) {
   new mapboxgl.Marker(el)
     .setLngLat(marker.geometry.coordinates)
     .addTo(map);
+
+  var gh_el = document.createElement('div');
+  gh_el.className = 'gh-marker';
+
+  new mapboxgl.Marker(gh_el)
+    .setLngLat(marker.geometry.coordinates)
+    .addTo(map);
 });
+

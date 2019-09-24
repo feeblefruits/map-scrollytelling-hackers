@@ -36,6 +36,15 @@ body { margin:0; padding:0; }
   cursor: pointer;
 }
 
+.gh-marker {
+  background-image: url('/scrolly-map-assets/icons/newspaper_icon.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .map-chapter {
     padding-top: 20vh;
     padding-bottom: 80vh;
@@ -69,9 +78,8 @@ body { margin:0; padding:0; }
 .scroll_prompt {
     text-align: center;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 16px;
     padding-top: 40px;
-    text-decoration: underline;
 }
 
 .header-wrapper {
@@ -89,13 +97,39 @@ body { margin:0; padding:0; }
     font-size: 110px;
     color: #ffffff;
     text-align: center;
-    text-decoration: underline;
+    border-style: solid;
+    border-width: 9px;
+}
+
+.sub_heading_wrap {
+    padding: 5px;
+    flex-wrap: wrap;
 }
 
 .sub_heading {
     font-size: 30px;
     color: #ffffff;
     text-align: center;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
 }
 
 .block-header {
@@ -103,7 +137,7 @@ body { margin:0; padding:0; }
     color: #ffffff;
     text-align: center;
     border-style: solid;
-    border-width: 7px;
+    border-width: 9px;
 }
 
 mark {
@@ -116,7 +150,7 @@ mark {
     font-size: 50px;
     }
   .sub_heading {
-    font-size: 20px;
+    font-size: 16px;
   }
   .pretty_box {
     width: 90%;
