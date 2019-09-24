@@ -13,9 +13,9 @@ zoom: 7.2,
 pitch: 0,
 bearing: 0,
 },
-'zimbabwe': {
+'mg-office': {
 duration: 3000,
-center: [32.6334, -20.1914],
+center: [28.0175513, -26.1844499],
 zoom: 8,
 pitch: 45,
 bearing: 40,
@@ -99,3 +99,42 @@ var element = document.getElementById(id);
 var bounds = element.getBoundingClientRect();
 return bounds.top < window.innerHeight && bounds.bottom > 0;
 }
+
+var geojson = {
+  type: 'FeatureCollection',
+  features: [{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [28.0175513, -26.1844499]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'Mail & Guardian'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.414, 37.776]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'Linode'
+    }
+  }]
+};
+
+// add markers to map
+geojson.features.forEach(function(marker) {
+
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'mg-marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+    .setLngLat(marker.geometry.coordinates)
+    .addTo(map);
+});

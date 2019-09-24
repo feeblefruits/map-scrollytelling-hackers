@@ -17,7 +17,7 @@ body { margin:0; padding:0; }
 }
 
 #features {
-    padding-top: 15vh;
+    padding-top: 0;
     padding-left: 3%;
     padding-right: 3%;
     display: inline-block;
@@ -27,15 +27,18 @@ body { margin:0; padding:0; }
     background-color: transparent;
 }
 
-.scroll-notification {
-    position: sticky;
-    color: black;
-    bottom: 0px;
+.mg-marker {
+  background-image: url('/scrolly-map-assets/icons/amp.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .map-chapter {
-    padding-top: 15vh;
-    padding-bottom: 50vh;
+    padding-top: 20vh;
+    padding-bottom: 80vh;
     padding-left: 5%;
     padding-right: 5%;
     opacity: 0.99;   
@@ -52,15 +55,13 @@ body { margin:0; padding:0; }
 
 .pretty_box {
     display: inline-block;
-    width: 90%;
+    width: 40%;
     padding: 20px;
     text-align: left;
     font-size: 15px;
     line-height: 140%;
     color: black;
     background-color: #ffffff;
-    opacity: 0.9;
-    filter: alpha(opacity=90);
     border-style: solid;
     border-radius: 15px;
 }
@@ -73,9 +74,19 @@ body { margin:0; padding:0; }
     text-decoration: underline;
 }
 
+.header {
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
 .heading {
-    padding: 20px;
-    font-size: 140px;
+    padding: 0;
+    font-size: 110px;
     color: #ffffff;
     text-align: center;
     text-decoration: underline;
@@ -85,25 +96,6 @@ body { margin:0; padding:0; }
     font-size: 30px;
     color: #ffffff;
     text-align: center;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .2em solid white; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    animation: 
-        typing 3.5s steps(24, end),
-        blink-caret .75s step-end infinite;
-    }
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: white; }
 }
 
 mark {
@@ -111,15 +103,15 @@ mark {
     color: #000000;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
   .heading {
-    font-size: 80px;
+    font-size: 50px;
     }
   .sub_heading {
-    font-size: 50px;
+    font-size: 20px;
   }
   .pretty_box {
-    width: 50%;
+    width: 90%;
   }
 }
 
