@@ -99,6 +99,7 @@ a {
 .sub_heading_wrap {
     padding: 5px;
     flex-wrap: wrap;
+    display: inline-block;
 }
 
 .sub_heading {
