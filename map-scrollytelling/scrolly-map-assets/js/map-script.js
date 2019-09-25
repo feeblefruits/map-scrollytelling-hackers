@@ -21,34 +21,32 @@ pitch: 50,
 bearing: 30,
 },
 'mg-office': {
-duration: 3000,
+duration: 5000,
 center: [28.0175513, -26.1844499],
 zoom: 7,
 pitch: 45,
 bearing: 40,
 },
 'ghana': {
-duration: 3000,
+duration: 4000,
 center: [-0.187288, 5.591182],
 zoom: 6,
 pitch: 45,
 bearing: 20,
 },
 'philly': {
-duration: 3000,
-bearing: 100,
+duration: 5000,
 center: [-75.1652, 39.9526],
-zoom: 6,
-zoom: 7,
+zoom: 9,
+bearing: 50,
 speed: 0.6,
 pitch: 60,
 },
-'eastern-cape': {
+'newark': {
 duration: 3000,
-center: [28.7781, -31.6067],
-zoom: 4,
+center: [-74.172363, 40.735657],
+zoom: 9,
 bearing: 60,
-zoom: 6.5,
 bearing: 30,
 pitch: 70,
 }
@@ -133,6 +131,28 @@ var geojson = {
     properties: {
       title: 'Mapbox',
       description: 'Cameroon'
+        }
+    },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-75.1652, 39.9526]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'Linode'
+        }
+    },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-74.172363, 40.735657]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'Newark'
     },
   }]
 };
