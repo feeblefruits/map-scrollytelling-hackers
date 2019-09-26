@@ -42,12 +42,11 @@ bearing: 50,
 pitch: 60,
 },
 'newark': {
-duration: 5000,
+duration: 4000,
 center: [-74.172363, 40.735657],
-zoom: 9,
-bearing: 60,
-bearing: 30,
-pitch: 70,
+zoom: 12,
+pitch: 20,
+bearing: 80,
 },
 'spain': {
 duration: 5000,
@@ -113,11 +112,12 @@ var geojson = {
         },
         properties: {
           icon: {
-            iconUrl: 'https://violence.mg.co.za/assets/images/icons/amp.png',
+            iconUrl: 'scrolly-map-assets/icons/amp.png',
             iconSize: [50, 50], // size of the icon
             iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
             popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
-            className: 'mg-office'
+            className: 'mg-office',
+            iconPop: 'This is the Mail & Guardian office.'
           }
         }
       },
@@ -129,34 +129,96 @@ var geojson = {
         },
         properties: {
           icon: {
-            iconUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnCLUkpKZKIZB2Z1UlEkoRMusXbmtTafB-_yk7AWa8iWmn1ti8Rw',
+            iconUrl: 'scrolly-map-assets/icons/newspaper_icon.png',
             iconSize: [50, 50], // size of the icon
             iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
             popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
-            className: 'cameroon-office'
-      }
-    }
-  }
+            className: 'ghana-office'
+          }
+        }
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [9.700664, 4.055373]
+        },
+        properties: {
+          icon: {
+            iconUrl: 'scrolly-map-assets/icons/centurian_icon.jpg',
+            iconSize: [50, 50], // size of the icon
+            iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+            popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+            className: 'cameroon-office',
+          }
+        }
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-75.1652, 39.9526]
+        },
+        properties: {
+          icon: {
+            iconUrl: 'scrolly-map-assets/icons/linode_icon.png',
+            iconSize: [50, 50], // size of the icon
+            iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+            popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+            className: 'linode-office',
+          }
+        }
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-74.172363, 40.735657]
+        },
+        properties: {
+          icon: {
+            iconUrl: '/scrolly-map-assets/icons/fb_annon_icon.jpg',
+            iconSize: [50, 50], // size of the icon
+            iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+            popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+            className: 'newark',
+          }
+        }
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-1.633, 42.817]
+        },
+        properties: {
+          icon: {
+            iconUrl: '/scrolly-map-assets/icons/breiner_icon.jpeg',
+            iconSize: [50, 50], // size of the icon
+            iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+            popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+            className: 'breiner-office',
+          }
+        }
+      },
 ]};
 
-
-// cameroon - [9.700664, 4.055373]
-// linode - [-75.1652, 39.9526]
-// newark - [-74.172363, 40.735657]
 
 
 // add markers to map
 geojson.features.forEach(function(marker) {
 
-  // create a HTML element for each feature
-  var el = document.createElement('div');
-  el.className = 'orange-marker';
-  el.style.backgroundImage = 'url(' + marker.properties.icon.iconUrl + ')';
-  el.style.width = '50px';
-  el.style.height = '50px';
+    // var popup = new mapboxgl.Popup({ offset: 25 })
+    // .setText(marker.properties.icon.iconPop);
 
-  // make a marker for each feature and add to the map
-  new mapboxgl.Marker(el)
+    var el = document.createElement('div');
+    el.className = 'orange-marker';
+    el.style.backgroundImage = 'url(' + marker.properties.icon.iconUrl + ')';
+    el.style.width = '50px';
+    el.style.height = '50px';
+
+    new mapboxgl.Marker(el)
     .setLngLat(marker.geometry.coordinates)
+    // .setPopup(popup)
     .addTo(map);
 });
