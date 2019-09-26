@@ -20,6 +20,13 @@ zoom: 6,
 pitch: 50,
 bearing: 30,
 },
+'cameroon-zoom': {
+duration: 4000,
+center: [9.700664, 4.055373],
+zoom: 14,
+pitch: 120,
+bearing: 80,
+},
 'mg-office': {
 duration: 5000,
 center: [28.0175513, -26.1844499],
@@ -46,14 +53,28 @@ duration: 4000,
 center: [-74.172363, 40.735657],
 zoom: 12,
 pitch: 20,
-bearing: 80,
+bearing: 200,
+},
+'newark-zoom': {
+duration: 6000,
+center: [-74.172363, 40.735657],
+zoom: 4,
+pitch: 20,
+bearing: 20,
 },
 'spain': {
 duration: 5000,
-center: [-1.633, 42.817],
+center: [-1.6590018, 42.8020307],
 zoom: 7,
 bearing: 60,
 pitch: 40,
+},
+'spain-zoom': {
+duration: 5000,
+center: [-1.6590018, 42.8020307],
+zoom: 14,
+bearing: 20,
+pitch: 20,
 }
 };
 
@@ -189,7 +210,7 @@ var geojson = {
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [-1.633, 42.817]
+          coordinates: [-1.6590018, 42.8020307]
         },
         properties: {
           icon: {
