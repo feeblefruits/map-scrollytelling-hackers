@@ -10,9 +10,11 @@
 </head>
 
 <body>
-
 <div class='map-wrapper'>
 <div id='map'></div>
+<div onclick="censorMe()" class="eye-wrapper">
+	<img src="scrolly-map-assets/icons/eye.svg" alt="open eye" class="censorship-eye"/>
+</div>
 <div id='features'>
 	<section id='header-wrapper' class='map-chapter active'>
 		<h1 class='heading'>
@@ -20,7 +22,7 @@
 		</h1>
 		<div class="sub_heading_wrap">
 			<h2 class='sub_heading'>
-				How the M&G got censored 
+				How the M&G got censored
 			</h2>
 		</div>
 	</section>
@@ -162,8 +164,21 @@
 	</section>
 </div>
 </div>
-</body>
+
+<script>
+
+function censorMe() {
+	console.log(document.getElementsByTagName("mark"))
+
+	for (var i = 0; i < document.getElementsByTagName("mark").length; i++) {
+		document.getElementsByTagName("mark")[i].style.backgroundColor = "#ffa500";
+	}
+};
+
+</script>
 <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0-beta.1/mapbox-gl.js"></script>
 <script src="scrolly-map-assets/js/map-script.js"></script>
+
+</body>
 
 </html>

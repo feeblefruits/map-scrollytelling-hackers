@@ -1,3 +1,4 @@
+
 var chapters = {
 'header-wrapper': {
 duration: 3000,
@@ -109,15 +110,15 @@ break;
 var activeChapterName = 'header-wrapper';
 function setActiveChapter(chapterName) {
 if (chapterName === activeChapterName) return;
- 
+
 map.flyTo(chapters[chapterName]);
- 
+
 document.getElementById(chapterName).setAttribute('class', 'map-chapter active');
 document.getElementById(activeChapterName).setAttribute('class', 'map-chapter');
- 
+
 activeChapterName = chapterName;
 }
- 
+
 function isElementOnScreen(id) {
 var element = document.getElementById(id);
 var bounds = element.getBoundingClientRect();
@@ -223,8 +224,6 @@ var geojson = {
         }
       },
 ]};
-
-
 
 // add markers to map
 geojson.features.forEach(function(marker) {
