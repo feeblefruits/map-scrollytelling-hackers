@@ -12,8 +12,8 @@
 <body>
 <div class='map-wrapper'>
 <div id='map'></div>
-<div onclick="censorMe()" class="eye-wrapper">
-	<img src="scrolly-map-assets/icons/eye.svg" alt="open eye" class="censorship-eye"/>
+<div class="eye-wrapper">
+	<div class="eye" id="censorship-eye" onclick="censorMe()"/>
 </div>
 <div id='features'>
 	<section id='header-wrapper' class='map-chapter active'>
@@ -165,20 +165,27 @@
 </div>
 </div>
 
-<script>
-
-function censorMe() {
-	console.log(document.getElementsByTagName("mark"))
-
-	for (var i = 0; i < document.getElementsByTagName("mark").length; i++) {
-		document.getElementsByTagName("mark")[i].style.backgroundColor = "#ffa500";
-	}
-};
-
-</script>
 <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0-beta.1/mapbox-gl.js"></script>
 <script src="scrolly-map-assets/js/map-script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+<script>
+	function censorMe() {
+		var elem = document.getElementById("censorship-eye"),
+				marker = document.getElementsByTagName("mark"),
+				eye = elem.classList.contains("eye");
+		for (var i = 0; i < document.getElementsByTagName("mark").length; i++) {
+			if(eye) {
+				elem.classList.remove("eye");
+				elem.classList.add("eye-off");
+				marker[i].style.backgroundColor = "#ffa500";
+			} else {
+				elem.classList.remove("eye-off");
+				elem.classList.add("eye");
+				marker[i].style.backgroundColor = "#000";
+			}
+		}
+	};
+</script>
 </body>
-
 </html>

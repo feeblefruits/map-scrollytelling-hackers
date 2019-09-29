@@ -170,7 +170,18 @@ mark:hover {
   z-index: 999;
 }
 
-.censorship-eye {
+.eye-off {
+  content: url("/scrolly-map-assets/icons/eye-off.svg");
+  display: block;
+}
+
+.eye {
+  content: url("/scrolly-map-assets/icons/eye.svg");
+  display: block;
+}
+
+#censorship-eye {
+  cursor: pointer;
   padding: 6px;
   height: 40px;
 	width: 40px;
@@ -180,7 +191,7 @@ mark:hover {
   z-index: 999;
 }
 
-.censorship-eye:hover {
+#censorship-eye:hover {
   height: 45px;
 	width: 45px;
   background-color: #ffd27f;
