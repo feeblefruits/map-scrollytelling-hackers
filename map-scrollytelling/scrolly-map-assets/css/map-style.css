@@ -90,6 +90,18 @@ a {
     border-radius: 15px;
 }
 
+.pretty_box_end {
+    display: inline-block;
+    width: 40%;
+    padding: 20px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 140%;
+    background-color: #ffffff;
+    border-style: solid;
+    border-radius: 15px;
+}
+
 .scroll_prompt {
     text-align: center;
     color: #ffffff;
@@ -162,7 +174,8 @@ mark {
 }
 
 mark:hover {
-    background-color: #ffa500;
+    color: #ffd27f;
+    font-weight: 300;
 }
 
 .eye-wrapper {
@@ -209,6 +222,10 @@ mark:hover {
   }
   .pretty_box {
     width: 90%;
+    padding: 10px;
+  }
+  .pretty_box_end {
+    width: 90%;
   }
   .block-header {
     font-size: 50px;
@@ -220,10 +237,6 @@ mark:hover {
 .scrolly_image_big {
     height: auto;
     width: 95%;
-}
-
-.pretty_box {
-    padding: 10px;
 }
 
 }

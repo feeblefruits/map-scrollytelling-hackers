@@ -76,6 +76,13 @@ center: [-1.6590018, 42.8020307],
 zoom: 14,
 bearing: 20,
 pitch: 20,
+},
+'end': {
+duration: 7000,
+center: [24.372235, -37.615087],
+zoom: 2,
+bearing: 0,
+pitch: 10,
 }
 };
 
