@@ -68,6 +68,8 @@ a {
     opacity: 0.99;
 }
 
+#notif-toggle {
+}
 
 .map-chapter.active {
 }
@@ -181,16 +183,32 @@ mark:hover {
 .eye-wrapper {
   padding: 10px;
   z-index: 999;
+  position: fixed;
+}
+
+.prompt_text {
+  visibility: hidden;
+  margin-left: 100px;
+  width: 100px;
+  font-size: 12px;
+  text-align: center;
+  background-color: #ffffff;
+  border-style: solid;
+  border-radius: 15px;
+  padding: 5px;
 }
 
 .eye-off {
   content: url("/scrolly-map-assets/icons/eye-off.svg");
   display: block;
+  float: left;
 }
 
 .eye {
   content: url("/scrolly-map-assets/icons/eye.svg");
   display: block;
+  float: left;
+
 }
 
 #censorship-eye {

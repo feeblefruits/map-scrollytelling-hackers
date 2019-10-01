@@ -3,6 +3,8 @@
 
 <head>
 <meta charset="utf-8"/>
+<link rel="shortcut icon" type="scrolly-map-assets/icons/amp.png" href="favicon.ico">
+<link rel="icon" type="scrolly-map-assets/icons/amp.png" href="favicon.ico">
 
 <link rel="stylesheet" type="text/css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0-beta.1/mapbox-gl.css">
 <link rel="stylesheet" href="scrolly-map-assets/css/map-style.css">
@@ -14,7 +16,11 @@
 <div id='map'></div>
 <div class="eye-wrapper">
 	<div class="eye" id="censorship-eye" onclick="censorMe()"/>
-	<span class="tooltiptext">Tap to toggle censorship</span>
+	</div>
+	<div class="prompt_text">
+		Tap the eye icon to toggle redaction.
+	</div>
+	</div>
 </div>
 <div id='features'>
 	<section id='header-wrapper' class='map-chapter active'>
@@ -48,7 +54,7 @@
 	<section id='cameroon' class='map-chapter'>
 		<p class=pretty_box>It all began in the coastal city of Douala in Cameroon.</p>
 	</section>
-	<section id='cameroon' class='map-chapter'>
+	<section id='cameroon' class='map-chapter' id="notif-toggle">
 		<p class=pretty_box>In May this year the <i>M&G</i> started investigating a man known by many names. Njock Ajuk Eyong, also known as <mark>AJ Ajuk</mark>, and <mark>Njuck Eyong</mark> and now <mark>NJ Ayuk JD, MBA</mark>, owns Centurion Law, is from Cameroon.</p>
 	</section>
 	<section id='cameroon-zoom' class='map-chapter'>
@@ -85,7 +91,7 @@
 		<p class="pretty_box">The article noted that: “Her accomplice, Njoy Ayuk Eyong, also known as <mark>NJ Ayuk MBA</mark>, is out of Ghana at the moment.”</p>
 	</section>
 	<section id='mg-office' class='map-chapter'>
-		<p class="pretty_box">Three months after the <i>M&G</i> published the report on Eyong, we were forced to take down the article.</p>
+		<p class="pretty_box">Three months after the <i>M&G</i> published the report on Eyong, we received an email.</p>
 	</section>
 	<section id='mg-office' class='map-chapter'>
 		<p class="pretty_box">
@@ -105,7 +111,7 @@
 		</p>
 	</section>
 		<section id='mg-office' class='map-chapter'>
-		<p class="pretty_box">“In practice, the opportunity to challenge this [complaint] only arises once the content has already been removed. <a href="https://ilr.law.uiowa.edu/print/volume-103-issue-2/section-512-of-the-digital-millennium-copyright-act-user-experience-and-user-frustration/">Commentators</a> have described the DMCA as 'one of the biggest threats to free speech online', because the ‘notice and take-down scheme’ fails to provide affected websites with due process before the content is removed," Singh said.
+		<p class="pretty_box">“In practice, the opportunity to challenge this [complaint] only arises once the content has already been removed. <a href="https://ilr.law.uiowa.edu/print/volume-103-issue-2/section-512-of-the-digital-millennium-copyright-act-user-experience-and-user-frustration/" target="_blank">Commentators</a> have described the DMCA as 'one of the biggest threats to free speech online', because the ‘notice and take-down scheme’ fails to provide affected websites with due process before the content is removed," Singh said.
 		</p>
 	</section>
 	<section id='mg-office' class='map-chapter'>
@@ -143,7 +149,7 @@
 	</section>
 	<section id='philly' class='map-chapter'>
 		<img class="scrolly_image" src='/scrolly-map-assets/media/aj_censored_article.jpg'>
-		<p class="scroll_prompt">This was the <i>M&G</i> story on Ajuk, which is available through web archives. View <a href="http://web.archive.org/web/20190621181041/https://mg.co.za/article/2019-06-21-00-fraudster-named-in-sas-oil-deal">here</a>.</p>
+		<p class="scroll_prompt">This was the <i>M&G</i> story on Ajuk, which is available through web archives. View <a href="http://web.archive.org/web/20190621181041/https://mg.co.za/article/2019-06-21-00-fraudster-named-in-sas-oil-deal" target="_blank">here</a>.</p>
 	</section>
 	<section id='philly' class='map-chapter'>
 		<p class=block-header>The Invisible Man</p>
@@ -207,7 +213,7 @@
 		<p class=block-header>To Be Continued</p>
 	</section>
 	<section id='end' class='map-chapter'>
-		<p class=pretty_box_end><i>This microsite was developed by Jacques Coetzee, who is an Adamela Data Fellow at the Mail & Guardian. His position is funded by the Indigo Trust. Writing is by Athandiwe Saba and Coetzee. Code and data used can be found Github and more coverage of press freedom can be found on <a href="https://mg.co.za/tag/press-freedom/"><i>M&G</i>.</i></p>
+		<p class=pretty_box_end><i>This scrollytelling experience was developed by Jacques Coetzee. Writing is by Athandiwe Saba and Coetzee. Code and data used can be found Github and more coverage of press freedom can be found on <a href="https://mg.co.za/tag/press-freedom/" target="_blank"><i>M&G</i>.</i></p>
 	</section>
 </div>
 </div>
@@ -233,6 +239,21 @@
 			}
 		}
 	};
+
+	$(window).scroll(function() {
+	    var top_of_element = $("#notif-toggle").offset().top;
+	    var bottom_of_element = $("#notif-toggle").offset().top + $("#notif-toggle").outerHeight()();
+	    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+	    var top_of_screen = $(window).scrollTop();
+
+	    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+	        document.getElementById('prompt_text').style.visibility = "visible"
+	    } else {
+	        document.getElementById('prompt_text').style.visibility = "hidden"
+	    }
+	});
+
+
 </script>
 </body>
 </html>
