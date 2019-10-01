@@ -68,9 +68,6 @@ a {
     opacity: 0.99;
 }
 
-#notif-toggle {
-}
-
 .map-chapter.active {
 }
 
@@ -107,8 +104,9 @@ a {
 .scroll_prompt {
     text-align: center;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 15px;
     padding-top: 40px;
+
 }
 
 .header-wrapper {
@@ -176,38 +174,44 @@ mark {
 }
 
 mark:hover {
-    color: #ffd27f;
-    font-weight: 300;
+    color: #ffffff;
 }
 
 .eye-wrapper {
   padding: 10px;
   z-index: 999;
-  position: fixed;
+}
+
+.prompt_text_wrap {
+  padding-top: 10px;
+  position: absolute;
+  /*visibility: visible;*/
 }
 
 .prompt_text {
-  visibility: hidden;
-  margin-left: 100px;
-  width: 100px;
-  font-size: 12px;
+  visibility: visible;
+  margin-left: 70px;
+  color: #ffffff;
   text-align: center;
-  background-color: #ffffff;
-  border-style: solid;
-  border-radius: 15px;
-  padding: 5px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  padding-top: 8px;
 }
 
 .eye-off {
   content: url("/scrolly-map-assets/icons/eye-off.svg");
   display: block;
   float: left;
+  position: fixed;
 }
 
 .eye {
   content: url("/scrolly-map-assets/icons/eye.svg");
   display: block;
   float: left;
+  position: fixed;
+
 
 }
 
@@ -225,7 +229,7 @@ mark:hover {
 #censorship-eye:hover {
   height: 45px;
 	width: 45px;
-  background-color: #ffd27f;
+  background-color: #ffa500;
 }
 
 @media only screen and (max-width: 600px) {
@@ -255,6 +259,9 @@ mark:hover {
 .scrolly_image_big {
     height: auto;
     width: 95%;
+}
+.map-chapter {
+  /*padding-left: 0;*/
 }
 
 }

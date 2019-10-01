@@ -17,9 +17,11 @@
 <div class="eye-wrapper">
 	<div class="eye" id="censorship-eye" onclick="censorMe()"/>
 	</div>
-	<div class="prompt_text">
-		Tap the eye icon to toggle redaction.
-	</div>
+		<div class="prompt_text_wrap">
+			<div class="prompt_text">
+				Tap icon to toggle redaction
+			</div>
+		</div>
 	</div>
 </div>
 <div id='features'>
@@ -29,7 +31,7 @@
 		</h1>
 		<div class="sub_heading_wrap">
 			<h2 class='sub_heading'>
-				How the M&G got censored
+				How the M&G got <mark>censored</mark>
 			</h2>
 		</div>
 	</section>
@@ -226,7 +228,7 @@
 	function censorMe() {
 		var elem = document.getElementById("censorship-eye"),
 				marker = document.getElementsByTagName("mark"),
-				eye = elem.classList.contains("eye");
+				eye = elem.classList.contains("eye")
 		for (var i = 0; i < document.getElementsByTagName("mark").length; i++) {
 			if(eye) {
 				elem.classList.remove("eye");
@@ -241,15 +243,16 @@
 	};
 
 	$(window).scroll(function() {
+
 	    var top_of_element = $("#notif-toggle").offset().top;
-	    var bottom_of_element = $("#notif-toggle").offset().top + $("#notif-toggle").outerHeight()();
+	    var bottom_of_element = $("#notif-toggle").offset().top + $("#notif-toggle").outerHeight();
 	    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
 	    var top_of_screen = $(window).scrollTop();
 
 	    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
-	        document.getElementById('prompt_text').style.visibility = "visible"
+	    	$( ".prompt_text_wrap" ).css( "visibility", "visible" );
 	    } else {
-	        document.getElementById('prompt_text').style.visibility = "hidden"
+	    	$( ".prompt_text_wrap" ).css( "visibility", "hidden" );
 	    }
 	});
 
