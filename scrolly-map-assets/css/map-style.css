@@ -34,8 +34,8 @@ a {
 
 #features {
     padding-top: 5%;
-    padding-left: 3%;
-    padding-right: 3%;
+    /*padding-left: 3%;*/
+    /*padding-right: 3%;*/
     display: inline-block;
     text-align: center;
     font-family: sans-serif;
@@ -76,6 +76,21 @@ a {
     margin-bottom: 200px;
 }
 
+.map-chapter.last {
+  padding-bottom: 30vh;
+}
+
+.map-chapter.picture {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.pic-element {
+  object-fit: contain;
+  max-width: 100vw;
+  max-height: 90vh;
+}
+
 .pretty_box {
     display: inline-block;
     width: 40%;
@@ -96,6 +111,7 @@ a {
     text-align: left;
     font-size: 15px;
     line-height: 140%;
+    color: black;
     background-color: #ffffff;
     border-style: solid;
     border-radius: 15px;
@@ -104,8 +120,8 @@ a {
 .scroll_prompt {
     text-align: center;
     color: #ffffff;
-    font-size: 15px;
-    padding-top: 40px;
+    font-size: 14px;
+    padding-top: 10px;
 
 }
 
@@ -250,7 +266,7 @@ mark:hover {
     width: 90%;
   }
   .block-header {
-    font-size: 50px;
+    font-size: 45px;
     }
 .scrolly_image {
     height: auto;

@@ -56,6 +56,12 @@
 	<section id='cameroon' class='map-chapter'>
 		<p class=pretty_box>It all began in the coastal city of Douala in Cameroon.</p>
 	</section>
+	<section id='cameroon' class='map-chapter picture'>
+		<img class="pic-element" src="/scrolly-map-assets/media/douala_cameroon.jpg">
+		<p class="scroll_prompt">
+			City of Douala, Cameroon. (Photo: Wikipedia) 
+		</p>
+	</section>
 	<section id='cameroon' class='map-chapter' id="notif-toggle">
 		<p class=pretty_box>In May this year the <i>M&G</i> started investigating a man known by many names. Njock Ajuk Eyong, also known as <mark>AJ Ajuk</mark>, and <mark>Njuck Eyong</mark> and now <mark>NJ Ayuk JD, MBA</mark>, owns Centurion Law, is from Cameroon.</p>
 	</section>
@@ -190,11 +196,17 @@
 	<section id='spain' class='map-chapter'>
 		<p class=pretty_box>Breiner currently lives in Spain, where he teaches digital media and communication. When he is not lecturing at the University of Navarra he’s blogging about the field and his lectures.</p>
 	</section>
+	<section id='spain' class='map-chapter picture'>
+		<img class="pic-element" src="/scrolly-map-assets/media/uni_of_navarra.jpg">
+		<p class="scroll_prompt">
+			University of Navarra in Pamplona, Spain. (Photo: University of Navarra) 
+		</p>
+	</section>
 	<section id='spain' class='map-chapter'>
 		<p class=pretty_box>Little did Breiner know that his blog is at the centre of a web ring — a devious tactic used by hackers to increase traffic to their websites.</p>
 	</section>
 	<section id='spain-zoom' class='map-chapter'>
-		<p class=pretty_box>The <i>M&G</i> contacted Breiner in Pamplona. He maintained that he had no knowledge of the blogs, nor the names <mark>Ian Simpson and Chris Lynn</mark>.</p>
+		<p class=pretty_box>The <i>M&G</i> contacted Breiner in the northern Spanish province Pamplona. He maintained that he had no knowledge of the blogs, nor the names <mark>Ian Simpson and Chris Lynn</mark>.</p>
 	</section>
 	<section id='spain-zoom' class='map-chapter'>
 		<p class=pretty_box>“If this guy <mark>[Ian Simpson]</mark> wants to impersonate me, I'm not sure I could do anything about it. Do I think it's good? No. I'm upset about it,” he said in a staunch American accent, sounding agitated.</p>
@@ -214,8 +226,8 @@
 	<section id='end' class='map-chapter'>
 		<p class=block-header>To Be Continued</p>
 	</section>
-	<section id='end' class='map-chapter last-child'>
-		<p class=pretty_box_end><i>This scrollytelling article was developed by Jacques Coetzee. Writing is by Athandiwe Saba and Coetzee. Code and data used can be found Github and more coverage of press freedom can be found on the <a href="https://mg.co.za/tag/press-freedom/" target="_blank"><i>M&G</i>.</i></p>
+	<section id='end' class='map-chapter last'>
+		<p class=pretty_box><i>This scrollytelling article was developed by Jacques Coetzee. Writing is by Athandiwe Saba and Coetzee. Code and data used can be found Github and more coverage of press freedom can be found on the <a href="https://mg.co.za/tag/press-freedom/" target="_blank"><i>M&G</i>.</i></p>
 	</section>
 </div>
 </div>
@@ -241,21 +253,6 @@
 			}
 		}
 	};
-
-	$(window).scroll(function() {
-
-	    var top_of_element = $("#notif-toggle").offset().top;
-	    var bottom_of_element = $("#notif-toggle").offset().top + $("#notif-toggle").outerHeight();
-	    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
-	    var top_of_screen = $(window).scrollTop();
-
-	    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
-	    	$( ".prompt_text_wrap" ).css( "visibility", "visible" );
-	    } else {
-	    	$( ".prompt_text_wrap" ).css( "visibility", "hidden" );
-	    }
-	});
-
 
 </script>
 </body>
